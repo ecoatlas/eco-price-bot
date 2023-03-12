@@ -2,6 +2,7 @@ import { Client, ActivityType } from 'discord.js'
 import config from './config.js'
 import getPrice from './price.js'
 import getGasPrice from './gas.js'
+import currency from './utils/formatter.js'
 
 for (const token of config.tokens) {
   const client = new Client({
@@ -26,7 +27,7 @@ for (const token of config.tokens) {
       if (botEco) {
         (async function getEco() {
           const price = await getPrice()
-          botEco.setNickname(`💸 ${price.eco.usd}`)
+          botEco.setNickname(`💸 ${currency(price.eco.usd)}`)
           setTimeout(getEco, 60 * 1000)
         })()
 
@@ -41,7 +42,7 @@ for (const token of config.tokens) {
       if (botEcoX) {
         (async function getEcoX() {
           const price = await getPrice()
-          botEcoX.setNickname(`💸 ${price.ecox.usd}`)
+          botEcoX.setNickname(`💸 ${currency(price.ecox.usd)}`)
           setTimeout(getEcoX, 60 * 1000)
         })()
 
