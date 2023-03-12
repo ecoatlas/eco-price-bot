@@ -1,11 +1,15 @@
 {
   "name": "eco-price-bot",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Suite of Discord bots that tracks Eco Currency and Ethereum Gas prices",
+  "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon -r dotenv/config ./src/index.js",
+    "start": "pm2 restart ./src/index.js --node-args='-r dotenv/config'",
+    "prettier": "npx prettier --write ./src",
+    "eslint": "npx eslint ./src --quite --fix"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +19,13 @@
   },
   "devDependencies": {
     "dotenv": "^16.0.3",
-    "nodemon": "^2.0.21"
+    "eslint": "^8.36.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "nodemon": "^2.0.21",
+    "prettier": "^2.8.4"
   }
 }
