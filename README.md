@@ -13,15 +13,15 @@ Suite of Discord bots for tracking the Eco Currency and Ethereum Gas prices. It 
 
 You can add these bots to your server. You don't have to add them all; you can just choose the ones you like most.
 
-**Suggested method:**
-- Create a role for the bots and enable the option `Display role members separately from online members`
-- Add the bots to the role
-- Allow only "Change Nickname" permission so that the bot can update its username with pricing.
-
 **Invites:**
 - [ECO Price bot invite](https://discord.com/api/oauth2/authorize?client_id=1083918603688083487&permissions=67108864&scope=bot)
 - [ECOx Price bot invite](https://discord.com/api/oauth2/authorize?client_id=1083919055448195092&permissions=67108864&scope=bot)
 - [Ethereum Gas Price bot invite](https://discord.com/api/oauth2/authorize?client_id=1084322980219342859&permissions=67108864&scope=bot)
+
+**Suggested method:**
+- Create a role for the bots and enable the option `Display role members separately from online members`
+- Add the bots to the role
+- Allow only "Change Nickname" permission so that the bot can update its username with pricing.
 
 
 
@@ -29,7 +29,7 @@ You can add these bots to your server. You don't have to add them all; you can j
 
 Follow the guidelines below if you'd rather host and control your own bots.
 
-1. Create your bots in the [Discord Portal](https://discord.com/developers/applications 'Discord Portal') by following this [guide](https://discordjs.guide/preparations/setting-up-a-bot-application.html)
+1. Create your bots in the [Discord Developer Portal](https://discord.com/developers/applications 'Discord Portal') by following this [guide](https://discordjs.guide/preparations/setting-up-a-bot-application.html)
 2. Add your bots to the Discord server by following this [guide](https://discordjs.guide/preparations/adding-your-bot-to-servers.html)
 3. Clone this repo:
    ```
