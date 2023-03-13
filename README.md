@@ -14,9 +14,9 @@ Suite of Discord bots for tracking the Eco Currency and Ethereum Gas prices. It 
 You can add these bots to your server. You don't have to add them all; you can just choose the ones you like most.
 
 **Invites:**
-- [ECO Price bot invite](https://discord.com/api/oauth2/authorize?client_id=1083918603688083487&permissions=67108864&scope=bot)
-- [ECOx Price bot invite](https://discord.com/api/oauth2/authorize?client_id=1083919055448195092&permissions=67108864&scope=bot)
-- [Ethereum Gas Price bot invite](https://discord.com/api/oauth2/authorize?client_id=1084322980219342859&permissions=67108864&scope=bot)
+- <a href="https://discord.com/api/oauth2/authorize?client_id=1083918603688083487&permissions=67108864&scope=bot" target="_blank">ECO Price bot invite</a>
+- <a href="https://discord.com/api/oauth2/authorize?client_id=1083919055448195092&permissions=67108864&scope=bot" target="_blank">ECOx Price bot invite</a>
+- <a href="https://discord.com/api/oauth2/authorize?client_id=1084322980219342859&permissions=67108864&scope=bot" target="_blank">Ethereum Gas Price bot invite</a>
 
 **Suggested method:**
 - Create a role for the bots and enable the option `Display role members separately from online members`
