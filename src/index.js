@@ -1,7 +1,6 @@
 import { Client, ActivityType } from 'discord.js'
 import config from './config.js'
-import getPrice from './price.js'
-import getGasPrice from './gas.js'
+import { getTokenPrice, getGasPrice } from './price.js'
 import currency from './utils/formatter.js'
 
 for (const token of config.tokens) {
@@ -20,13 +19,13 @@ for (const token of config.tokens) {
       const botEcoX = bot.get(config.botEcoX.id)
       const botGas = bot.get(config.botGas.id)
 
-      // immediately invoked function expression which creates the function
-      // then calls itself again and automatically starts the loop subsequently
-      // setTimeout guarantees that there's at least an interval of delay between calls
-      // makes it easier to cancel the loop if required
+      // immediately invoked function expression
+      // creates the function then calls itself again and automatically starts the loop subsequently
+      // setTimeout guarantees that there's at least an interval of delay between calls so
+      // they don't overlap and makes it easier to cancel the loop if required
       if (botEco) {
         (async function getEco() {
-          const price = await getPrice()
+          const price = await getTokenPrice()
           botEco.setNickname(`💸 ${currency(price.eco.usd)}`)
           setTimeout(getEco, 60 * 1000)
         })()
@@ -41,7 +40,7 @@ for (const token of config.tokens) {
 
       if (botEcoX) {
         (async function getEcoX() {
-          const price = await getPrice()
+          const price = await getTokenPrice()
           botEcoX.setNickname(`💸 ${currency(price.ecox.usd)}`)
           setTimeout(getEcoX, 60 * 1000)
         })()
