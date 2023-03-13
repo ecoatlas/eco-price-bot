@@ -3,9 +3,9 @@
 Suite of Discord bots for tracking the Eco Currency and Ethereum Gas prices. It automatically updates the bots' nickname every minute with the most recent prices.
 
 **Features:**
-- Simple: tickers for ECO, ECOx, and Ethereum Gas.
-- Efficient: combines three bots into a single app to make maintenance and code repetition as simple as feasible.
-- Secure: only one Discord permission is necessary.
+- Simple: tickers for ECO, ECOx, and Ethereum Gas
+- Efficient: combines three bots into a single app to make maintenance and code repetition as simple as feasible
+- Secure: only one Discord permission is necessary
 
 
 
@@ -14,14 +14,14 @@ Suite of Discord bots for tracking the Eco Currency and Ethereum Gas prices. It 
 You can add these bots to your server. You don't have to add them all; you can just choose the ones you like most.
 
 **Invites:**
-- <a href="https://discord.com/api/oauth2/authorize?client_id=1083918603688083487&permissions=67108864&scope=bot" target="_blank">ECO Price bot invite</a>
-- <a href="https://discord.com/api/oauth2/authorize?client_id=1083919055448195092&permissions=67108864&scope=bot" target="_blank">ECOx Price bot invite</a>
-- <a href="https://discord.com/api/oauth2/authorize?client_id=1084322980219342859&permissions=67108864&scope=bot" target="_blank">Ethereum Gas Price bot invite</a>
+- <a href="https://discord.com/api/oauth2/authorize?client_id=1077820281701277788&permissions=67108864&scope=bot" target="_blank">ECO Price bot invite</a>
+- <a href="https://discord.com/api/oauth2/authorize?client_id=1077820544919023727&permissions=67108864&scope=bot" target="_blank">ECOx Price bot invite</a>
+- <a href="https://discord.com/api/oauth2/authorize?client_id=1077786551385333950&permissions=67108864&scope=bot" target="_blank">Ethereum Gas Price bot invite</a>
 
 **Suggested method:**
 - Create a role for the bots and enable the option `Display role members separately from online members`
 - Add the bots to the role
-- Allow only "Change Nickname" permission so that the bot can update its username with pricing.
+- Allow only `Change Nickname` permission so that the bot can update its username with pricing
 
 
 
@@ -37,7 +37,7 @@ Follow the guidelines below if you'd rather host and control your own bots.
    ```
 4. Make a copy of the `.env.example` file, rename it to `.env`, and then update it with your keys:
     ```
-    BOT_ID...=dicord_client_id
+    BOT_ID...=discord_client_id
     BOT_TOKEN...=discord_bot_token
     BOT_API...=coingecko_or_etherscan_api
     ```
