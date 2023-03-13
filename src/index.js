@@ -3,7 +3,7 @@ import config from './config.js'
 import { getTokenPrice, getGasPrice } from './price.js'
 import currency from './utils/formatter.js'
 
-for (const token of config.tokens) {
+for (const token of config.auth) {
   const client = new Client({
     intents: [
       'Guilds'

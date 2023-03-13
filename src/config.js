@@ -1,5 +1,5 @@
 export default {
-  tokens: [
+  auth: [
     process.env.BOT_TOKEN_ECO,
     process.env.BOT_TOKEN_ECOX,
     process.env.BOT_TOKEN_GAS,
