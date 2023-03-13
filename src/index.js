@@ -3,26 +3,35 @@ import config from './config.js'
 import { getTokenPrice, getGasPrice } from './price.js'
 import currency from './utils/formatter.js'
 
+// Iterate over auth tokens for all clients
 for (const token of config.auth) {
+
+  // Declare intent so that bots can update the nickname
   const client = new Client({
     intents: [
       'Guilds'
     ]
   })
 
+  // Execute functions when the client is ready to start
   client.on('ready', () => {
     console.log('We ready!')
- 
+
+    // Discord.js relies heavily on caching to provide its functionality
+    // Access the cache to get all guilds the clients are part of
     client.guilds.cache.forEach((guild) => {
+
+      // Get the cache for all clients' ids
       const bot = client.guilds.cache.get(guild.id).members.cache
       const botEco = bot.get(config.botEco.id)
       const botEcoX = bot.get(config.botEcoX.id)
       const botGas = bot.get(config.botGas.id)
 
-      // immediately invoked function expression
-      // creates the function then calls itself again and automatically starts the loop subsequently
-      // setTimeout guarantees that there's at least an interval of delay between calls so
-      // they don't overlap and makes it easier to cancel the loop if required
+      // IIFE (Immediately Invoked Function Expression)
+      // Create the function, run the moment it's invoked, and auto start the loop subsequently
+      // Get price and update nickname
+      // setTimeout is less accurate than setInterval but guarantees at least an interval of delay so calls don't overlap
+      // Update client status to inform which asset the client is watching
       if (botEco) {
         (async function getEco() {
           const price = await getTokenPrice()
@@ -70,5 +79,6 @@ for (const token of config.auth) {
     })
   })
 
+  // Log in all clients
   client.login(token)
 }

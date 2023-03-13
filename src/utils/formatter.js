@@ -1,4 +1,5 @@
 const currency = (number) => {
+  // Create a constructor to enable language-sensitive number formatting
   return new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',
