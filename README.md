@@ -53,7 +53,7 @@ Follow the guidelines below if you'd rather host and control your own bots.
    - for production:
    ```
    npm install pm2 -g
-   npm start
+   npm run start
    ```
 
 
