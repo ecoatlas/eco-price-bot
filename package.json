@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon -r dotenv/config ./src/index.js",
-    "start": "pm2 start ./src/index.js --node-args='-r dotenv/config' --cron-restart='0 0/12 * * *'",
+    "start": "pm2 start ./src/index.js --node-args='-r dotenv/config' --cron-restart='0 0/12 * * *' --name='Eco Currency Price'",
     "prettier": "npx prettier --write ./src",
     "eslint": "npx eslint ./src --quite --fix"
   },
